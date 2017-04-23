@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="创新设计@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="创新设计">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="Analyze"/>
+    <schema id="4" parent="1" name="Film"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="sys"/>
+    <table id="9" parent="2" name="停用词库"/>
+    <table id="10" parent="2" name="分词表"/>
+    <table id="11" parent="2" name="消极词库"/>
+    <table id="12" parent="2" name="积极词库"/>
+    <table id="13" parent="2" name="评论源"/>
+    <column id="14" parent="9" name="停用词号">
+      <Position>1</Position>
+      <DataType>char(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="9" name="停用词">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="16" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>停用词号</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="17" parent="10" name="分词号">
+      <Position>1</Position>
+      <DataType>char(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="10" name="分词">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="10" name="词性">
+      <Position>3</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="20" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>分词号</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="21" parent="11" name="消极词号">
+      <Position>1</Position>
+      <DataType>char(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="11" name="消极词">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="11" name="权重">
+      <Position>3</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="24" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>消极词号</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="25" parent="12" name="积极词号">
+      <Position>1</Position>
+      <DataType>char(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="12" name="积极词">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="12" name="权重">
+      <Position>3</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="28" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>积极词号</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="13" name="评论编号">
+      <Position>1</Position>
+      <DataType>char(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="13" name="评论">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="13" name="插入时间">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="32" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>评论编号</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
